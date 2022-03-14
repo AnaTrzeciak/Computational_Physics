@@ -36,7 +36,8 @@ int main(){
 
  trapez_sum = (trapez_sum + fb + fa)*step;
 
- cout << step << endl;
+ double expected = 4.0;
+ cout << "Expected = " << expected << endl;
  cout << setprecision(6) << "I = " << trapez_sum << endl;
 
 }

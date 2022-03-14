@@ -13,7 +13,7 @@ using namespace std;  //calling the standard directory
 long double f(long double x)
 {
     long double d;
-    d= sin(x)*pow(x, -0.07056 + 0.02018*log(x) - 0.001953*pow(log(x),3));
+    d= sqrt(x + 8)*sqrt(x + 4)/sqrt(x);
     return d;
 }
 

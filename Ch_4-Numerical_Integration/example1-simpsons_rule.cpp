@@ -1,8 +1,24 @@
-/* A simple function which implements the simpson's rule
+/* Approximate the integral of f(x) from a to b by Simpson's rule.
 
-example: int 4 (dx)/(1 + x^{2}), 0.0 to 1.0
+    Simpson's rule approximates the integral \int_a^b f(x) dx by the sum:
+    (dx/3) \sum_{k=1}^{N/2} (f(x_{2i-2} + 4f(x_{2i-1}) + f(x_{2i}))
+    where x_i = a + i*dx and dx = (b - a)/N.
 
-obs: we must get the pi value.
+    Parameters
+    ----------
+    f : function
+        Vectorized function of a single variable
+    a , b : numbers
+        Interval of integration [a,b]
+    N : (even) integer
+        Number of subintervals of [a,b]
+
+    Returns
+    -------
+    float
+        Approximation of the integral of f(x) from a to b using Simpson's rule with N subintervals of equal length.
+
+example: int 4dx/(1 + x^{2}), 0.0 to 1.0. We must get the pi value.
 */
 
 #include <iostream>
@@ -44,8 +60,9 @@ int main(){
 
  simpson_sum = (simpson_sum + fb + fa)*(step/3);
 
- 
- cout << step << " " << fa << " " << fb << endl;
- cout << setprecision(6) << "I = " << 4*simpson_sum << endl;
+ double expected = 3.1416; 
+
+ cout << "Expected result = " << expected << endl;
+ cout << setprecision(8) << "I = " << 4*simpson_sum << endl;
 
 }

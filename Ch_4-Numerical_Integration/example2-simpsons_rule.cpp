@@ -47,6 +47,9 @@ int main(){
 
   simpson_sum = (simpson_sum)*(step/3);
 
+ double expected = 26.79907501657212;
+ cout << setprecision(6) << "Expected = " << expected << endl;
  cout << setprecision(6) << "I = " << simpson_sum << endl;
+ cout << setprecision(6) << "Global error = " << expected -simpson_sum << endl;
 
 }

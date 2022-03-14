@@ -30,7 +30,11 @@ int main(){
   int_gauss += w_til*exp(x_til)*cos(x_til);
  }
 
+ double expected = 1.27508;
+
+ cout << "Expected Result = " << expected << endl;
  cout << "Gaussian Quadrature: I = " << int_gauss << endl;
+ cout << "Global Error = " << expected - int_gauss << endl;
 
  return 0;
 }
