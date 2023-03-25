@@ -1,2 +1,8 @@
 # Computational_Physics
-Codes about methods in computational physics. Book: Computational Physics (2010) - Morten Jensen
+
+Numerical methods to solving physics/math problems.
+
+References:
+ - Computational Physics (2010) - Morten Jensen
+ - Scipy: https://scipy.org
+ - GNU GSL: https://www.gnu.org/software/gsl/
